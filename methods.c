@@ -8,7 +8,7 @@ void LFSRInit (char seed, int config)
   }  
   else if(config == 2) 
   {
-  	SR.SR = (unsigned int)seed;
+  	SR.SR = (unsigned char)seed;
   }
   else if(config == 3)
   {
@@ -26,9 +26,9 @@ unsigned char LFSR_Fibonacci (void)
 unsigned char LFSR_Galois (void)
 {
     SR.Bit_6 = SR.Bit_0;
-    SR.Bit_5 = ~(SR.Bit_0 ^ SR.Bit_3);
+    SR.Bit_2 = ~(SR.Bit_0 ^ SR.Bit_3);
     SR.SR >>= 1;
-    return SR.Bit_5;
+    return SR.Bit_2;
 }
 
 int LCG (void)

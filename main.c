@@ -23,19 +23,19 @@ void Output (void) {
 
  
 int main(int argc, char *argv[]) {
-  char seed;
+  int seed;
   int config;
   setlocale( LC_ALL,"Russian" );
   printf("%s","      Методы\n");
   printf("\n");
   printf("%s","1.Метод Фибоначчи\n");
   printf("%s","2.Метод Галуа\n");
-  printf("%s","3.Линейный конгруэнтный метода\n");
+  printf("%s","3.Линейный конгруэнтный метод\n");
   printf("\n");
-  printf("%s","Введите зерно: ");
+  printf("%s","Введите зерно псевдослучайной последовательности: ");
   scanf("%d", &seed);
   printf("\n");
-  printf("%s","Выберите метод: ");
+  printf("%s","Выберите метод из списка, введя цифру метода: ");
   scanf("%d", &config);
   printf("%s"," --------------");
   register unsigned char LFSROut;

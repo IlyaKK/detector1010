@@ -7,7 +7,7 @@ unsigned char Detector (unsigned char in) {
         case B : if ( in) state = B; else state = C; break;
         case C : if ( in) state = D; else state = A; break;
         case D : if ( in) state = B; else state = E; break;
-        case E : if ( in) state = A; else state = D;
+        case E : if ( in) state = D; else state = A;
     }
     if (state == E) return 1; else return 0;
 }
